@@ -11,6 +11,7 @@
         :address="home.address"
         :price="home.price"
         :type="home.type"
+        :id="home.id"
     ></card-component>
   </div>
   <button-more-component v-if="!hiddenButton"
@@ -75,6 +76,7 @@
     margin-top: 45px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .card {
     display: flex;

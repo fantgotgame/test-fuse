@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="$router.push({ name: 'currentHome', params: { homeId: id } })">
     <div class="image">
       <img class="card__image" src="../assets/images/house.png" alt="House">
       <span class="image__tag" :class="type === 'IndependentLiving' ? 'image__tag_independent' : 'image__tag_support'">
@@ -31,7 +31,8 @@
             title: String,
             address: String,
             price: Number,
-            type: String
+            type: String,
+            id: String
         },
         methods: {
             toSale(price) {
@@ -49,6 +50,7 @@
     background: #F8F8F8;
     border: 1px solid #D8D8D8;
     margin: 0 11px 38px 11px;
+    cursor: pointer;
 
     &__image {
       display: block;
@@ -114,6 +116,16 @@
       &_independent {
         background: #006F79;
         padding: 8px 10px 5px 11px;
+      }
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .card {
+      width: 290px;
+
+      &__image {
+        width: 290px;
       }
     }
   }

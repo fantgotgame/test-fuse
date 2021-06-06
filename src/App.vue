@@ -1,16 +1,14 @@
 <template>
   <div class="container">
-    <developments-component></developments-component>
+    <router-view></router-view>
+<!--    <developments-component></developments-component>-->
   </div>
 </template>
 
 <script>
-import DevelopmentsComponent from "./components/DevelopmentsComponent";
+// import DevelopmentsComponent from "./components/DevelopmentsComponent";
     export default {
         name: 'App',
-        components: {
-            DevelopmentsComponent
-        }
     }
 </script>
 

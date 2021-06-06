@@ -54,4 +54,10 @@
       padding: 0 20px;
     }
   }
+
+  @media (max-width: 1212px) {
+    .search-form__input {
+      width: 200px;
+    }
+  }
 </style>
